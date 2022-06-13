@@ -1,0 +1,141 @@
+/* Variable Goes here */
+:root {
+  --ff-main: 'Outfit';
+  --default-l-h: 1.5; /* line-height */
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-cyan: 178, 100%, 50%;
+  --clr-blue-100: hsl(215, 51%, 70%);
+  --clr-blue-200: hsl(215, 32%, 27%);
+  --clr-blue-300: hsl(216, 50%, 16%);
+  --clr-blue-400: hsl(217, 54%, 11%);
+  --clr-black: hsl(199, 58%, 7%);
+  --clr-blue-303: hsl(214, 41%, 27%);
+  --clr-blue-305: hsl(214, 62%, 29%);
+
+}
+
+html {
+  font-size: 62.5%; /* now 1 rem = 10px by default its 16px */
+}
+
+/* utility classes */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.center,.grid{ display: grid; }
+.center { place-items: center; }
+.spacing-x-1 { gap: 0.5rem; }
+.spacing-x-2 { gap: 1rem; }
+.rounded-sm { border-radius: 0.2rem; }
+.cursor-pointer { cursor: pointer; }
+
+body {
+  background: var(--clr-blue-400);
+  line-height: var(--default-l-h: );
+  font-size: 1.6rem;
+  font-family: var(--ff-main);
+  padding-inline: 1.2rem;
+  height: 100vh;
+}
+
+.card {
+  max-width: 320px;
+  margin-inline: auto;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+
+  background: var(--clr-blue-300);
+  overflow: hidden;
+
+  gap: 1.6rem;
+}
+
+.card__image {
+  border-radius: 1rem;
+}
+
+.card__top {
+  width: 100%;
+  height: 30rem;
+  position: relative;
+}
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  background: hsl(var(--clr-cyan));
+  border-radius: 0.6rem;
+  opacity: 0;
+  transition: .4s ease-in-out;
+}
+
+.card__top:hover .card__overlay {
+  opacity: 1;
+  background: hsl(var(--clr-cyan), 0.5);
+}
+
+
+.name,
+.card__title {
+  color: white;
+}
+
+.card:hover .card__title , .card:hover .name{ 
+  color:hsl(var(--clr-cyan));
+}
+
+
+/* 
+.card:hover .name{ 
+  color:hsl(var(--clr-cyan));
+} */
+
+
+.card__avatar {
+  width: 30px;
+}
+
+.card__content {
+  gap: 2rem;
+  color: white;
+}
+
+.card__title {
+  font-size: 2.7rem;
+}
+
+.card__description,
+.card__time,
+.footer h3 {
+  color: var(--clr-blue-100);
+}
+
+.card__price > span
+{
+  color: hsl(var(--clr-cyan));
+}
+
+.footer h3  {
+  font-size: 1.5rem;
+}
+
+.card__divider {
+  height: 1px;
+  background: var(--clr-blue-200);
+  border-radius: 10rem;
+}
+
+.credits{
+  position: fixed;
+  left: 0;
+  bottom: 13px;
+  width: 100%;
+  text-align: center;
+  color: var(--clr-blue-303);
+}
+
+.credits:hover {
+  color: var(--clr-blue-305);
+}
